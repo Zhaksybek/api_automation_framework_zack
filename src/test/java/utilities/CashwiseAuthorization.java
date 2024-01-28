@@ -16,6 +16,7 @@ public class CashwiseAuthorization {
 
         Map<String, Object> requestBody = new HashMap<>();
 //        requestBody.put("email" ,"codewise_batch4_api@gmail.com" );
+
 //        requestBody.put("password" ,"123456" );
         requestBody.put("email" , Config.getProperty("email") );
         requestBody.put("password" ,Config.getProperty("password") );
