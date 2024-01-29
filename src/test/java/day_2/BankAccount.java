@@ -17,7 +17,7 @@ public class BankAccount {
 
 
     /**
-     *
+     * As a user I am able to login application
      */
    @Test
    public void test_0_token(){
@@ -39,6 +39,9 @@ public class BankAccount {
    }
 
 
+    /**
+     * A a user I am able to add new bank account to application
+     */
    @Test
     public void test_1_createBankAccount(){
        String url = "https://backend.cashwise.us/api/myaccount/bankaccount";
@@ -64,6 +67,10 @@ public class BankAccount {
 
    }
 
+    /**
+     * As a user I am able to get all my bank Account list
+     *
+     */
     @Test
     public void test_2_getListOfBankAccounts(){
 
@@ -81,7 +88,9 @@ public class BankAccount {
 
     }
 
-
+    /**
+     * As a user I am able to GET single bank account
+     */
     @Test
     public void test_3_getSingleBankAccount(){
 
@@ -101,11 +110,15 @@ public class BankAccount {
 
    //=========Test Config reader==========================================
 
+    /**
+     * USE CONFIG READER FILE
+     * As a user I am able to GET single bank account
+     */
     @Test
     public void test_4_getSingleBankAccount(){
 
     //String token ="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjb2Rld2lzZV9iYXRjaDRfYXBpQGdtYWlsLmNvbSIsImV4cCI6MTcwNjQwNTUyOSwiaWF0IjoxNzA1ODAwNzI5fQ.YidPtkHfXioUt2nh3b87IUkykEJQbHsNbrLLEFt9MbXT-5Kf2U33P6YuGdd6Bzu2h1pvIHECFNSDrLexdRqeUw";
-    String token = utilities.CashwiseAuthorization.getToken();
+    String token = CashwiseAuthorization.getToken();
 
     //System.out.println( token );
         String url ="https://backend.cashwise.us/api/myaccount/bankaccount/851";
@@ -157,6 +170,12 @@ public class BankAccount {
             System.out.println("======= TEST Ends ======================");
         }
 
+    }
+
+    @Test
+    public void test_6_getListOfBankAccounts(){
+        String token = CashwiseAuthorization.getToken();
+        System.out.println(token);
     }
 
 
