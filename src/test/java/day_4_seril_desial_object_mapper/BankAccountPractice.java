@@ -2,10 +2,16 @@ package day_4_seril_desial_object_mapper;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 import pojo.BankAccountPOJO;
+import pojo.CustomResponse;
+import pojo.RequestBody;
+import utilities.CashwiseAuthorization;
+import utilities.Config;
 
 public class BankAccountPractice {
 
@@ -24,6 +30,39 @@ public class BankAccountPractice {
 
         System.out.println(bankAccount.getBank_account_name());
     }
+
+    @Test
+    public void test_2_createBankAccount() throws JsonProcessingException {
+        Faker faker = new Faker();
+        String token = CashwiseAuthorization.getToken();
+        String url = Config.getProperty("baseUrl")+ "/api/myaccount/bankaccount";
+
+        String bankAccountName = faker.company().name();
+        String description = faker.company().logo() + " Financial company";
+        double randomBalance = faker.number().numberBetween(200, 15000);
+
+
+
+        RequestBody requestBody = new RequestBody();
+
+        requestBody.setType_of_pay("BANK");
+        requestBody.setBank_account_name( bankAccountName );
+        requestBody.setDescription(  description );
+        requestBody.setBalance(randomBalance);
+
+
+
+        Response response = RestAssured.given()
+                .auth().oauth2(token)
+                .contentType(ContentType.JSON)
+                .body(requestBody)
+                .post(url);
+
+        response.prettyPrint();
+
+    }
+
+
 
 
 }

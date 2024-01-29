@@ -26,6 +26,20 @@ public class RequestBody {
     private boolean flag;
 
 
+    // Bank Account
+    private String bank_account_name;
+    private String description;
+    private String type_of_pay;
+    private double balance;
+
+    // Seller controller
+    private String company_name;
+    private String seller_name;
+   //  private String email;   We already have it
+    private String phone_number;
+    private String address;
+
+
 /*
 
     public String getEmail() {
