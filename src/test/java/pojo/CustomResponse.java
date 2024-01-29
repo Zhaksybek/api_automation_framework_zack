@@ -18,7 +18,20 @@ public class CustomResponse {
     private boolean flag;
 
 
+    /**
+     * "product_id": 719,
+     *     "product_title": "Apple magic mouse",
+     *     "product_price": 350.0,
+     */
+    private int product_id;
+    private String product_title;
+    private double product_price;
+
+
+
     private List<CustomResponse> responses ;
+
+    private String responseBody;
 
 
 
