@@ -76,4 +76,39 @@ public class ParsingXmlResponse {
 
 
     }
+
+
+    @Test
+    public void createNewTraveller(){
+        String url = "http://restapi.adequateshop.com/api/Traveler";
+
+        // XML data from the cURL command
+        String xmlData = "<?xml version=\"1.0\"?>" +
+                "<Travelerinformation>" +
+                "    <id>1</id>" +
+                "    <name>Kelly</name>" +
+                "    <email>candyelly1@gmail.com</email>" +
+                "    <adderes>California, LA</adderes>" +
+                "    <createdat>1970-01-01T00:00:00.001Z</createdat>" +
+                "</Travelerinformation>";
+
+        // Making the POST request using RestAssured
+        Response response = RestAssured.given()
+                .header("Content-Type", "application/xml")
+                .header("Accept", "application/xml")
+                .body(xmlData)
+                .post(url);
+
+        // Printing the response
+        System.out.println("Response Code: " + response.getStatusCode());
+        System.out.println("Response Body: " + response.getBody().asString());
+
+
+        System.out.println("===============================");
+
+        response.prettyPrint();
+
+    }
+
+
 }
