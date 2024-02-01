@@ -48,7 +48,7 @@ public class CustomResponse {
     {
     "id": "1202",
     "fake_id": 26,
-    "bank_account_name": "GG compsssany",
+    "bank_account_name": "GG compassion",
     "description": "Good company",
     "type_of_pay": "CASH",
     "balance": 10000.0,

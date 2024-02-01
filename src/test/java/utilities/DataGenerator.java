@@ -25,20 +25,6 @@ public class DataGenerator {
     }
 
 
-    /*
-
-    public Map<String, Object > reqBodyBankAccount(){
-        Faker faker = new Faker();
-        String companyName = faker.company().name();
-        Map<String, Object> requestBody = new HashMap<>();
-        requestBody.put("bank_account_name", companyName);
-        requestBody.put("description",  faker.company().name() + " Financial inc" );
-        requestBody.put("type_of_pay", "BANK");
-        requestBody.put("balance", faker.number().randomNumber(4, true));
-
-        return requestBody;
-    }
-     */
 
 
 
