@@ -6,6 +6,9 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ParsingXmlResponse {
 
 
@@ -87,7 +90,7 @@ public class ParsingXmlResponse {
                 "<Travelerinformation>" +
                 "    <id>1</id>" +
                 "    <name>Kelly</name>" +
-                "    <email>candyelly1@gmail.com</email>" +
+                "    <email>casndyelly1@gmail.com</email>" +
                 "    <adderes>California, LA</adderes>" +
                 "    <createdat>1970-01-01T00:00:00.001Z</createdat>" +
                 "</Travelerinformation>";

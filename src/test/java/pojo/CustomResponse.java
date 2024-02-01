@@ -30,8 +30,31 @@ public class CustomResponse {
 
 
     private List<CustomResponse> responses ;
-
     private String responseBody;
+
+    // Bank Account
+    private String id;
+    private String bank_account_name;
+    private double balance;
+
+
+    // Seller controller
+    private int seller_id;
+    private String seller_name;
+    private String phone_number;
+    private String address;
+
+    /*
+    {
+    "id": "1202",
+    "fake_id": 26,
+    "bank_account_name": "GG compsssany",
+    "description": "Good company",
+    "type_of_pay": "CASH",
+    "balance": 10000.0,
+    "history_balance_responses": []
+}
+     */
 
 
 
