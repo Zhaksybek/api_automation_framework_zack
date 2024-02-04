@@ -8,6 +8,14 @@ import lombok.Getter;
 import pojo.CustomResponse;
 
 public class APIRunner {
+
+    /** Day_5 APIRunner (Description about this class)
+     * APIRunner class contains custom methods for CRUD commands
+     * With help of this class we can focus on test logic, instead of automation
+     * script
+     */
+
+
     @Getter
     private static CustomResponse customResponse;
 
@@ -18,11 +26,7 @@ public class APIRunner {
     private static String token = CashwiseAuthorization.getToken(); // Get token once in class level and use it for entire project
 
 
-    /** Day_5 APIRunner (Description about this class)
-     * APIRunner class contains custom methods for CRUD commands
-     * With help of this class we can focus on test logic, instead of automation
-     * script
-     */
+
 
 
     /**
@@ -46,7 +50,7 @@ public class APIRunner {
                 // it allows to me get response body as a String and see if something wrong
                  customResponse.setResponseBody(response.asString());
             } catch (JsonProcessingException e) {
-                System.out.println("Maybe list response");;
+                System.out.println("Maybe list response");
             }
 
         return customResponse;
