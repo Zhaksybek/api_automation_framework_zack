@@ -40,6 +40,27 @@ public class RequestBody {
     private String address;
 
 
+
+    // day_6 Product controller
+    private String product_title;
+    private double product_price;
+    private int service_type_id;
+    private int category_id;
+    private String product_description;
+    /**
+         * {
+         *     "product_title": "Toyota12",
+         *     "product_price": 100000,
+         *     "service_type_id": 2,
+         *     "category_id": 805,
+         *     "product_description": "Car"
+         * }
+     */
+
+
+
+
+
 /*
 
     public String getEmail() {

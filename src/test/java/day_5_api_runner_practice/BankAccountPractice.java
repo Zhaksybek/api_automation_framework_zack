@@ -25,7 +25,7 @@ public class BankAccountPractice {
     @Test
     public void test_1_createBankAccount() throws JsonProcessingException {
 
-        String url = Config.getProperty("baseUrl") +"/api/myaccount/bankaccount";
+        String url = Config.getProperty("baseUrl") + "/api/myaccount/bankaccount";
 
         //getToken()
         RequestBody requestBody = new RequestBody();
@@ -57,8 +57,10 @@ public class BankAccountPractice {
 
     @Test
     public void test_2_getSingleBankAccount() throws JsonProcessingException {
+        // Step - 1 baseUrl + path
         String url = Config.getProperty("baseUrl") +"/api/myaccount/bankaccount/"+bankID ;
 
+        // Step - 2 hit GET request
         Response response = RestAssured.given()
                 .auth().oauth2(getToken())
                 .get(url);
@@ -66,8 +68,9 @@ public class BankAccountPractice {
         response.prettyPrint();
 
         System.out.println("========================================");
-
+        // Step - 3 Create Object mapper class
         ObjectMapper mapper = new ObjectMapper();
+        // Step - 4  get value of customResponse
         CustomResponse customResponse = mapper.readValue(response.asString(), CustomResponse.class);
 
 
