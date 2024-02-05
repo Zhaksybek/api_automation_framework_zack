@@ -133,22 +133,7 @@ public class GetRequestPractice {
         Assert.assertNotNull( APIRunner.getCustomResponse().getResponses()[0].getSeller_id() );
 
         //System.out.println( "Seller ID: "+  APIRunner.getcustomResponseArray()[0].getSeller_id() );
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
