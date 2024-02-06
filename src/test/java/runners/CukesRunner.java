@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         plugin = {"html:target/cucumber.html", "json:target/report.json"},
         features = "src/test/resources/features",
         glue = "steps",
-        tags = "@api",
+        tags = "@seller",
         dryRun = false // make it true if u wanna run dry to get implementation for steps
 
 )
