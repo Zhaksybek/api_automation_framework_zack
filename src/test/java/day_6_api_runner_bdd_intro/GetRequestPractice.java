@@ -18,7 +18,6 @@ import static utilities.CashwiseAuthorization.getToken;
 public class GetRequestPractice {
 
 
-
     @Test
     public void test_1_getSingleProduct() throws JsonProcessingException {
        // https://backend.cashwise.us /api/myaccount/products/1013
@@ -47,7 +46,7 @@ public class GetRequestPractice {
         Assert.assertNotNull(  customResponse.getProduct_description() );
 
         /**
-         *       private int product_id;
+         *     private int product_id;
          *     private String product_title;
          *     private double product_price;
          *     private String product_description;
