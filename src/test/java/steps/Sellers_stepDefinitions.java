@@ -64,6 +64,7 @@ public class Sellers_stepDefinitions {
     String pathApi = path+"/"+seller_id;
     APIRunner.runGET(pathApi);
 
+
     }
 
     @Then("delete same seller by api path {string} and id")
