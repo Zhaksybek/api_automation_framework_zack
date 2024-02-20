@@ -46,10 +46,6 @@ public class Sellers_stepDefinitions {
 
 
 
-
-
-
-
     @Given("user created new Seller with Faker class and api path {string}")
     public void userCreatedNewSellerWithFakerClassAndApiPath(String path) {
         APIRunner.runPOST( path, DataGenerator.sellerGenerator() );
