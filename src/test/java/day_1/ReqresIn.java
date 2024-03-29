@@ -88,8 +88,14 @@ public class ReqresIn {
 
         System.out.println(response.statusCode());
 
+    }
 
-
+    @Test
+    public void test_6_delete_user() {
+        String url = "https://reqres.in/api/users/2";
+        Response response = RestAssured.given().delete(url);
+        response.prettyPrint();
+        System.out.println(response.statusCode());
     }
 
 
