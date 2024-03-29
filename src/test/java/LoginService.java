@@ -1,7 +1,7 @@
 public class LoginService {
 
     public static void main(String[] args) {
-        System.out.println( "Login Service Automated" );
-        System.out.println("Hello! I added code");
+        int a = 10;
+        System.out.println("Hello! I added code "+ a);
     }
 }
