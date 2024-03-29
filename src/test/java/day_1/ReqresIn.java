@@ -15,7 +15,7 @@ public class ReqresIn {
 
 
    @Test
-   public void test_0_getSingleUser(){
+   public void test_0_getSingleUser(){ // Hello my friend and dostar
 
         String url = "https://reqres.in/api/users/1";
 
