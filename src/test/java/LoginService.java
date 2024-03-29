@@ -6,6 +6,9 @@ public class LoginService {
         // Checking my code
         int b = 10;
         System.out.println("My folks, Welcome to session!  "+ b);
+
+        int h = 10;
+        System.out.println("My folks, Welcome to session!  "+ h);
         
     }
 }
